@@ -1,3 +1,5 @@
+from open_ai.writer import writer_request
+
 def main():
     while True:
         # Ask for a prompt
@@ -6,7 +8,8 @@ def main():
             print("Goodbye!")
             break
 
-        response = f"The prompt you entered is: {prompt}"
+        message = writer_request(prompt)
+        response = f"The following message has been generated:\n{message}"
 
         # Print the response
         print(response)
