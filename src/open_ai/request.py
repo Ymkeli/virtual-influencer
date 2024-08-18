@@ -27,9 +27,9 @@ def query_open_ai(messages):
 # Basic request to DALL-E
 def query_dalle(prompt):
     response = client.images.generate(
-        model="dall-e-2",
+        model="dall-e-3",
         prompt=prompt,
         n=1,
-        size="256x256")
+        size="1024x1024")
     urls = [item.url for item in response.data]
     return urls
