@@ -1,25 +1,7 @@
 from open_ai.writer import writer_request
 from open_ai.image_creator import image_prompt_request, image_request
+from pretty_print import print_post, print_prompts, print_wait
 from errors import FunctionError
-
-def print_wait(content):
-    print()
-    print("### " + content + " ###")
-    print()
-    
-def print_post(content):
-    print()
-    print('-' * 70)
-    print(content)
-    print('-' * 70)
-    print()
-    
-def print_prompts(prompts):
-    print()
-    for idx, prompt in enumerate(prompts):
-        print(f"{idx + 1}. *** {prompt["title"]} ***")
-        print(prompt["content"])
-        print()
 
 def main():
     while True:
